@@ -1,3 +1,5 @@
+import "@/app/ui/global.css";
+import { space_grotesk } from "@/app/ui/fonts";
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +7,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${space_grotesk.className} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
